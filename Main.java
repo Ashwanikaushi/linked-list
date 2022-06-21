@@ -35,6 +35,17 @@ public class Main{
             }
             this.size++;
         }
+        public int getAt(int idx){
+            if(idx < 0 || idx >= size){
+                System.out.println("invalid arguments");
+                return -1;
+            }
+            Node temp = head;
+            for(int i = 1; i <= idx; i++){
+                temp = temp.data;
+            }
+            return temp.data;
+        }
 
       public int size(){
         return this.size;
